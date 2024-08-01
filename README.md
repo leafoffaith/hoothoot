@@ -1,6 +1,6 @@
 # (In-Development) Hoot Hoot
 
-**App for aggregating and searching for your favourite podcasts.**
+**App for looking up and aggregating your favourite podcasts.**
 
 ## _Latest Update_
 
