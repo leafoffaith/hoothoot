@@ -1,5 +1,7 @@
 # (In-Development) Hoot Hoot
 
+<img src="https://cdna.artstation.com/p/assets/images/images/071/866/474/large/bas-de-voogt-owl-in-tree-final.jpg?1706113885" />
+
 **App for looking up and aggregating your favourite podcasts.**
 
 ## _Latest Update_
