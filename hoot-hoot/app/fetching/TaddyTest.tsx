@@ -7,26 +7,26 @@ async function TaddyTest() {
 
     try {
         const query = encodeURIComponent(`
-      query {
-        getPodcastSeries(name:"The Daily"){
-          uuid
-          name
-          itunesId
-          description
-          imageUrl
-          itunesInfo{
-            uuid
-            baseArtworkUrlOf(size:640)
-          }
-        }
-      }
-    `);
+            query {
+                getPodcastSeries(name:"The Daily"){
+                uuid
+                name
+                itunesId
+                description
+                imageUrl
+                itunesInfo{
+                    uuid
+                    baseArtworkUrlOf(size:640)
+                }
+                }
+            }
+        `);
 
         const response = await fetch(`https://api.taddy.org/?query=${query}`, {
             method: 'GET',
             headers: {
                 'X-USER-ID': cookieStore.get('userId')?.value || '1632', // Get from cookies
-                'X-API-KEY': cookieStore.get('apiKey')?.value || '', // Get from cookies
+                'X-API-KEY': cookieStore.get('apiKey')?.value || process.env.GRAPHQL_API_KEY, // Get from cookies
             },
         });
 
@@ -42,6 +42,7 @@ async function TaddyTest() {
                 <pre>{JSON.stringify(data, null, 2)}</pre>
             </div>
         );
+
 
     } catch (error) {
         console.error("Error fetching data:", error);
